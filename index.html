@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali & Brothers | Luxury Construction</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#080a0d;
+    color:white;
+    line-height:1.6;
+}
+
+:root{
+    --gold:#dcae4d;
+    --gold-light:#f4d078;
+    --dark:#080a0d;
+    --dark2:#111318;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(5,7,10,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border:2px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-size:22px;
+}
+
+.logo-text h3{
+    font-family:"Playfair Display",serif;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+.logo-text span{
+    color:var(--gold);
+    font-size:8px;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    font-size:13px;
+    color:#ddd;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold-light);
+}
+
+.quote-btn{
+    background:linear-gradient(135deg,#e8bd5d,#b88328);
+    color:#111;
+    padding:13px 23px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.menu-btn{
+    display:none;
+    color:var(--gold);
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    background:
+    linear-gradient(90deg,rgba(5,7,10,.95),rgba(5,7,10,.55),rgba(5,7,10,.15)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
+
+.hero-content{
+    max-width:700px;
+    padding-top:80px;
+}
+
+.small-title{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(50px,7vw,88px);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    color:#ddd;
+    max-width:580px;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 25px;
+    border:1px solid var(--gold);
+    font-size:13px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn.gold{
+    background:linear-gradient(135deg,#e8bd5d,#b88328);
+    color:#111;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.scroll{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#aaa;
+    font-size:10px;
+    letter-spacing:3px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title h2{
+    font-family:"Playfair Display",serif;
+    font-size:45px;
+}
+
+.section-title h2:after{
+    content:"";
+    width:70px;
+    height:2px;
+    display:block;
+    background:var(--gold);
+    margin:18px auto;
+}
+
+/* SERVICES */
+
+.services{
+    background:#0d0f13;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.service-card{
+    padding:35px 25px;
+    background:linear-gradient(145deg,#15181e,#0d0f13);
+    border:1px solid rgba(255,255,255,.08);
+    text-align:center;
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
+}
+
+.service-icon{
+    font-size:38px;
+    color:var(--gold);
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    color:#999;
+    font-size:13px;
+}
+
+/* STATS */
+
+.stats{
+    background:#15140f;
+    border-top:1px solid rgba(220,174,77,.25);
+    border-bottom:1px solid rgba(220,174,77,.25);
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+}
+
+.stat h3{
+    font-family:"Playfair Display",serif;
+    color:var(--gold);
+    font-size:42px;
+}
+
+.stat p{
+    color:#aaa;
+}
+
+/* ABOUT */
+
+.about{
+    background:#090b0e;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    height:520px;
+    object-fit:cover;
+}
+
+.experience{
+    position:absolute;
+    left:25px;
+    bottom:25px;
+    background:#0c0e11;
+    border:1px solid var(--gold);
+    padding:18px 25px;
+    text-align:center;
+}
+
+.experience strong{
+    color:var(--gold);
+    font-family:"Playfair Display",serif;
+    font-size:32px;
+    display:block;
+}
+
+.about-content h2{
+    font-family:"Playfair Display",serif;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    color:#aaa;
+    margin-bottom:18px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin:25px 0;
+}
+
+.feature{
+    font-size:13px;
+}
+
+.feature span{
+    color:var(--gold);
+    margin-right:7px;
+}
+
+/* PROJECTS */
+
+.projects{
+    background:#0d0f12;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.project{
+    position:relative;
+    overflow:hidden;
+    height:300px;
+}
+
+.project img{
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.project:hover img{
+    transform:scale(1.1);
+}
+
+.project:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 40%,rgba(0,0,0,.9));
+}
+
+.project-info{
+    position:absolute;
+    z-index:2;
+    bottom:20px;
+    left:20px;
+}
+
+.project-info h3{
+    font-family:"Playfair Display",serif;
+}
+
+.project-info span{
+    color:var(--gold);
+    font-size:11px;
+}
+
+/* WHY */
+
+.why{
+    background:
+    linear-gradient(rgba(8,10,13,.92),rgba(8,10,13,.96)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80")
+    center/cover;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why-card{
+    padding:35px;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(15,17,21,.7);
+}
+
+.why-icon{
+    color:var(--gold);
+    font-size:35px;
+}
+
+.why-card h3{
+    font-family:"Playfair Display",serif;
+    margin:15px 0 10px;
+}
+
+.why-card p{
+    color:#999;
+    font-size:13px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#0d0f12;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.contact-info h2{
+    font-family:"Playfair Display",serif;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.contact-info>p{
+    color:#999;
+    margin-bottom:30px;
+}
+
+.contact-item{
+    display:flex;
+    gap:18px;
+    margin:22px 0;
+}
+
+.contact-item .icon{
+    color:var(--gold);
+    font-size:22px;
+}
+
+.contact-item h4{
+    font-size:12px;
+    color:#888;
+}
+
+.contact-item p{
+    margin:0;
+    color:#eee;
+}
+
+.contact-form{
+    background:#15181d;
+    padding:35px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-form h3{
+    font-family:"Playfair Display",serif;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+input,
+textarea{
+    width:100%;
+    background:#0c0e11;
+    border:1px solid rgba(255,255,255,.1);
+    color:white;
+    padding:15px;
+    margin-bottom:15px;
+    outline:none;
+}
+
+input:focus,
+textarea:focus{
+    border-color:var(--gold);
+}
+
+textarea{
+    height:140px;
+    resize:none;
+}
+
+.submit{
+    width:100%;
+    padding:16px;
+    background:linear-gradient(135deg,#e8bd5d,#b88328);
+    border:0;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#07080a;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding:60px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-col h3{
+    font-family:"Playfair Display",serif;
+    margin-bottom:20px;
+}
+
+.footer-col p,
+.footer-col a{
+    display:block;
+    color:#888;
+    font-size:13px;
+    margin:9px 0;
+}
+
+.footer-col a:hover{
+    color:var(--gold);
+}
+
+.footer-bottom{
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    color:#666;
+    font-size:11px;
+}
+
+/* FLOATING */
+
+.floating{
+    position:fixed;
+    right:18px;
+    bottom:25px;
+    z-index:100;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.float-btn{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#111;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:#090b0e;
+        flex-direction:column;
+        padding:25px;
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .navbar>.quote-btn{
+        display:none;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .hero{
+        min-height:850px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .section-title h2,
+    .about-content h2,
+    .contact-info h2{
+        font-size:35px;
+    }
+
+    .service-grid,
+    .project-grid,
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-image img{
+        height:380px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<a href="#" class="logo">
+    <div class="logo-icon">⌂</div>
+    <div class="logo-text">
+        <h3>ALI & BROTHERS</h3>
+        <span>CONCRETE SMC PVT LTD</span>
+    </div>
+</a>
+
+<nav class="nav-links" id="navLinks">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT US</a>
+    <a href="#services">SERVICES</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#why">WHY US</a>
+    <a href="#contact">CONTACT</a>
+</nav>
+
+<a href="#contact" class="quote-btn">GET A QUOTE →</a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</div>
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="small-title">WE BUILD YOUR</div>
+
+<h1>
+DREAMS<br>
+INTO <span>REALITY</span>
+</h1>
+
+<p>
+Ali & Brothers Concrete SMC Pvt Ltd is a trusted name in
+construction, delivering high-quality, durable and
+innovative building solutions.
+</p>
+
+<div class="hero-buttons">
+<a href="#services" class="btn gold">OUR SERVICES →</a>
+<a href="#projects" class="btn">VIEW PROJECTS →</a>
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll">SCROLL TO EXPLORE ↓</div>
+
+</section>
+
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-title">
+<div class="small-title">WHAT WE DO</div>
+<h2>OUR SERVICES</h2>
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+<div class="service-icon">🏢</div>
+<h3>BUILDING CONSTRUCTION</h3>
+<p>Residential, commercial and industrial construction.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">📐</div>
+<h3>ARCHITECTURAL DESIGN</h3>
+<p>Modern and functional architectural solutions.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🏗</div>
+<h3>RENOVATION</h3>
+<p>Professional renovation and remodeling services.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">🏠</div>
+<h3>STRUCTURAL ENGINEERING</h3>
+<p>Strong, safe and reliable structural solutions.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">👷</div>
+<h3>PROJECT MANAGEMENT</h3>
+<p>Professional and hassle-free project management.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon">⚙</div>
+<h3>CONSULTANCY</h3>
+<p>Expert construction advice and consultation.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<h3>20+</h3>
+<p>Years of Experience</p>
+</div>
+
+<div class="stat">
+<h3>500+</h3>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat">
+<h3>300+</h3>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat">
+<h3>15+</h3>
+<p>Awards Won</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85">
+
+<div class="experience">
+<strong>20+</strong>
+YEARS OF EXCELLENCE
+</div>
+
+</div>
+
+<div class="about-content">
+
+<div class="small-title">ABOUT US</div>
+
+<h2>Building Trust Since 2004</h2>
+
+<p>
+Ali & Brothers Concrete SMC Pvt Ltd delivers exceptional
+construction services with a strong commitment to quality,
+innovation and customer satisfaction.
+</p>
+
+<div class="features">
+
+<div class="feature"><span>✓</span> Quality Workmanship</div>
+<div class="feature"><span>✓</span> Affordable Pricing</div>
+<div class="feature"><span>✓</span> Timely Delivery</div>
+<div class="feature"><span>✓</span> Customer Satisfaction</div>
+
+</div>
+
+<a href="#contact" class="btn gold">READ MORE →</a>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="projects" id="projects">
+
+<div class="container">
+
+<div class="section-title">
+<div class="small-title">OUR PROJECTS</div>
+<h2>RECENT PROJECTS</h2>
+</div>
+
+<div class="project-grid">
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=85">
+<div class="project-info">
+<span>LAHORE</span>
+<h3>MODERN RESIDENCE</h3>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85">
+<div class="project-info">
+<span>ISLAMABAD</span>
+<h3>COMMERCIAL PLAZA</h3>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=900&q=85">
+<div class="project-info">
+<span>KARACHI</span>
+<h3>INDUSTRIAL BUILDING</h3>
+</div>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85">
+<div class="project-info">
+<span>FAISALABAD</span>
+<h3>LUXURY VILLA</h3>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="why" id="why">
+
+<div class="container">
+
+<div class="section-title">
+<div class="small-title">WHY CHOOSE US</div>
+<h2>BUILT ON EXCELLENCE</h2>
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+<div class="why-icon">◆</div>
+<h3>Premium Quality</h3>
+<p>High-quality materials and professional workmanship.</p>
+</div>
+
+<div class="why-card">
+<div class="why-icon">◈</div>
+<h3>Experienced Team</h3>
+<p>Experienced professionals from planning to completion.</p>
+</div>
+
+<div class="why-card">
+<div class="why-icon">✦</div>
+<h3>Trusted Service</h3>
+<p>Transparency, reliability and customer satisfaction.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="contact" id="contact">
+
+<div class="container contact-grid">
+
+<div class="contact-info">
+
+<div class="small-title">GET IN TOUCH</div>
+
+<h2>Let's Build Something Great</h2>
+
+<p>
+Have a construction project in mind?
+Contact our team today.
+</p>
+
+<div class="contact-item">
+<div class="icon">📍</div>
+<div>
+<h4>ADDRESS</h4>
+<p>Main Boulevard, Pakistan</p>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="icon">☎</div>
+<div>
+<h4>PHONE</h4>
+<p>+92 322 4000342</p>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="icon">✉</div>
+<div>
+<h4>EMAIL</h4>
+<p>info@aliandbrothers.com</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="contact-form">
+
+<h3>Request A Quote</h3>
+
+<form onsubmit="sendForm(event)">
+
+<div class="form-row">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+</div>
+
+<input type="tel" placeholder="Phone Number">
+
+<input type="text" placeholder="Project Type">
+
+<textarea placeholder="Tell us about your project..." required></textarea>
+
+<button class="submit" type="submit">
+SEND REQUEST →
+</button>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-col">
+
+<div class="logo">
+<div class="logo-icon">⌂</div>
+<div class="logo-text">
+<h3>ALI & BROTHERS</h3>
+<span>CONCRETE SMC PVT LTD</span>
+</div>
+</div>
+
+<p style="margin-top:20px;">
+Building a better tomorrow with strong foundations today.
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h3>QUICK LINKS</h3>
+
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div class="footer-col">
+
+<h3>OUR SERVICES</h3>
+
+<a href="#services">Building Construction</a>
+<a href="#services">Architectural Design</a>
+<a href="#services">Renovation</a>
+<a href="#services">Structural Engineering</a>
+<a href="#services">Project Management</a>
+
+</div>
+
+<div class="footer-col">
+
+<h3>CONTACT US</h3>
+
+<p>📍 Main Boulevard, Pakistan</p>
+<p>☎ +92 322 4000342</p>
+<p>✉ info@aliandbrothers.com</p>
+<p>🕐 Mon - Sat: 9:00 AM - 6:00 PM</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<span>
+© 2026 Ali & Brothers Concrete SMC Pvt Ltd.
+All Rights Reserved.
+</span>
+
+<span>Designed with ♥ by Zeeshan</span>
+
+</div>
+
+</div>
+</footer>
+
+
+<!-- CALL + WHATSAPP + EMAIL -->
+
+<div class="floating">
+
+<a class="float-btn" href="tel:+923224000342">☎</a>
+
+<a class="float-btn"
+href="https://wa.me/923224000342"
+target="_blank">◉</a>
+
+<a class="float-btn"
+href="mailto:info@aliandbrothers.com">✉</a>
+
+</div>
+
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList.toggle("active");
+
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+link.addEventListener("click", () => {
+
+document
+.getElementById("navLinks")
+.classList.remove("active");
+
+});
+
+});
+
+
+function sendForm(event){
+
+event.preventDefault();
+
+alert(
+"Thank you! Your quote request has been received. We will contact you soon."
+);
+
+event.target.reset();
+}
+
+</script>
+
+</body>
+  </html>h
